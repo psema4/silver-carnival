@@ -1,0 +1,30 @@
+{
+  "name": "silver-carnival",
+  "version": "1.0.0",
+  "description": "A js13k 2016 entry and demonstrator for outbrk, a tiny game engine",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./node_modules/browserify/index.js -d -o dist/silver-carnival.js src/silver-carnival.js",
+    "dist": "node ./node_modules/browserify/index.js -o dist/silver-carnival.js src/silver-carnival.js && node ./node_modules/uglifyjs/bin/uglifyjs dist/silver-carnival.js > dist/silver-carnival.min.js",
+    "server": "npm run-script dev && cd ./dist && node ../node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psema4/silver-carnival.git"
+  },
+  "keywords": [
+    "js13k"
+  ],
+  "author": "Scott Elcomb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psema4/outbrk/issues"
+  },
+  "homepage": "https://github.com/psema4/outbrk#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "http-server": "^0.9.0",
+    "uglify-js": "^2.7.0"
+  }
+}
