@@ -5,8 +5,8 @@
   "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./node_modules/browserify/index.js -d -o dist/silver-carnival.js src/silver-carnival.js",
-    "dist": "node ./node_modules/browserify/index.js -o dist/silver-carnival.js src/silver-carnival.js && node ./node_modules/uglifyjs/bin/uglifyjs dist/silver-carnival.js > dist/silver-carnival.min.js",
+    "dev": "browserify -d -o dist/silver-carnival.js src/silver-carnival.js && node ./node_modules/uglify-js/bin/uglifyjs dist/silver-carnival.js > dist/silver-carnival.min.js",
+    "dist": "browserify -o dist/silver-carnival.js src/silver-carnival.js && node ./node_modules/uglify-js/bin/uglifyjs dist/silver-carnival.js > dist/silver-carnival.min.js",
     "server": "npm run-script dev && cd ./dist && node ../node_modules/http-server/bin/http-server"
   },
   "repository": {
