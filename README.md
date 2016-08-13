@@ -1,6 +1,6 @@
 # silver-carnival
 
-A js13k 2016 entry and demonstrator for outbrk, a tiny game engine
+A js13k 2016 entry and demonstrator for [outbrk](https://github.com/psema4/outbrk), a tiny game engine
 
 ## usage summary
 
