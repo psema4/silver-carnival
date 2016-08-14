@@ -1,0 +1,6 @@
+{
+  "name": "silver-carnival",
+  "tagline": "A js13k 2016 entry and demonstrator for outbrk, a tiny game engine",
+  "body": "[Play Now](dist/index.html)",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
