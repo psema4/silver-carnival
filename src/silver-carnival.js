@@ -1,8 +1,20 @@
 var outbrk = require('../outbrk/src/outbrk')
-  , objectPool = require('./objectPool')
+  , MessageBus = require('../outbrk/src/MessageBus')
+  , Ball = require('./entities/Ball')
+  , Box = require('./entities/Box')
+  , Pacman = require('./entities/Pacman')
 ;
 
 window.addEventListener('load', function() {
-    console.log('load');
-    window.game = new outbrk({ objectPool: objectPool });
+    var msgbus = new MessageBus();
+
+    window.game = new outbrk({
+        msgbus: msgbus
+
+      , createPool: function(pool) {
+            pool.ball = new Ball({ x: 0.15, msgbus: msgbus });
+            pool.box = new Box({ msgbus: msgbus });
+            pool.pacman = new Pacman({ msgbus: msgbus });
+        }
+    });
 });
